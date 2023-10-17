@@ -23,7 +23,7 @@ export default function Home({ title, ts }) {
 }
 
 export const getStaticProps = async () => {
-  const res = await axios.get(`/api/api`);
+  const res = await axios.get(`${process.env.URL}/api/api`);
   const { title } = res;
   return {
     revalidate: 10,
