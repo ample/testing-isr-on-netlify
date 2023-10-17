@@ -25,7 +25,9 @@ export const getStaticProps = async () => {
   const res = await axios.get(
     `https://main--lively-puppy-196937.netlify.app/api/test`
   );
-  const { title } = res;
+  const {
+    data: { title },
+  } = res;
   return {
     revalidate: 10,
     props: {
