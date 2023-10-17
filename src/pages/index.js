@@ -31,7 +31,7 @@ export const getStaticProps = async () => {
     data: { title },
   } = res;
   return {
-    revalidate: 10,
+    revalidate: 60,
     props: {
       title: title || "No title",
       ts: Date.now(),
